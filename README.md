@@ -59,7 +59,7 @@ This application helps NGOs:
 
 ## 🔗 Live Demo
 
-👉 (Add your Vercel link here)
+👉 https://careconnect-health-app.vercel.app/
 
 ---
 
