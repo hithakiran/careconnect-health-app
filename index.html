@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CareConnect Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- CHATBOT -->
+<div class="chatbot">
+  <div class="chat-header" onclick="toggleChat()">
+    💬 Health Assistant
+  </div>
+
+  <div class="chat-body" id="chatBody">
+    <div class="messages" id="messages">
+      <div class="bot-msg">Hello! How can I help you?</div>
+    </div>
+
+    <input type="text" id="chatInput" placeholder="Type a message..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>🏥 CareConnect</h1>
+    <p>NGO Healthcare Support Dashboard</p>
+  </div>
+
+  <div class="main">
+
+    <!-- FORM -->
+    <div class="form-box">
+      <h2>🩺 Patient Support Form</h2>
+      <form id="supportForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="number" id="age" placeholder="Age" required>
+        <textarea id="problem" placeholder="Describe symptoms..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+
+      <div id="responseBox"></div>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div class="dashboard">
+      <h2>📊 Patient Requests</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Problem</th>
+            <th>Severity</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

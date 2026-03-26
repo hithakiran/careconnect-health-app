@@ -1,0 +1,198 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+
+  background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+              url("https://images.unsplash.com/photo-1588776814546-1ffcf47267a5");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to right, #0077b6, #00b4d8);
+  color: white;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+/* MAIN LAYOUT */
+.main {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* LEFT FORM */
+.form-box {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+/* RIGHT DASHBOARD (BIGGER) */
+.dashboard {
+  flex: 1.5;
+  min-height: 350px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.form-box:hover,
+.dashboard:hover {
+  transform: translateY(-5px);
+}
+
+/* INPUTS */
+input, textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #f9fbfd;
+  transition: 0.2s;
+}
+
+input:focus, textarea:focus {
+  border-color: #0077b6;
+  background: white;
+  box-shadow: 0 0 5px rgba(0,119,182,0.2);
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  background: linear-gradient(to right, #0077b6, #0096c7);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.03);
+  background: linear-gradient(to right, #023e8a, #0077b6);
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th {
+  background: #0077b6;
+  color: white;
+  padding: 12px;
+}
+
+td {
+  padding: 10px;
+  background: #f9fbfd;
+}
+
+tr:hover td {
+  background: #eef6fb;
+}
+
+/* SEVERITY COLORS */
+.high {
+  color: red;
+  font-weight: bold;
+}
+
+.medium {
+  color: orange;
+  font-weight: bold;
+}
+
+.low {
+  color: green;
+  font-weight: bold;
+}
+
+/* CHATBOT */
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 280px;
+  font-family: Arial;
+}
+
+.chat-header {
+  background: #0077b6;
+  color: white;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+  text-align: center;
+}
+
+.chat-body {
+  background: white;
+  border: 1px solid #ccc;
+  display: none;
+  flex-direction: column;
+}
+
+.messages {
+  height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.bot-msg {
+  background: #e3f2fd;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 8px;
+}
+
+.user-msg {
+  background: #caf0f8;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 8px;
+  text-align: right;
+}
+
+#chatInput {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.chat-body button {
+  width: 100%;
+  border-radius: 0;
+}
